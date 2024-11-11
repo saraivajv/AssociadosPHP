@@ -1,0 +1,169 @@
+{
+    "info": {
+        "name": "Projeto API - Associados e Anuidades",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "AssociadoController",
+            "item": [
+                {
+                    "name": "Cadastrar Associado",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"nome\": \"João\",\n    \"email\": \"joao@example.com\",\n    \"cpf\": \"12345678901\",\n    \"data_filiacao\": \"2023-01-01\"\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8000/controllers/AssociadoController.php",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8000",
+                            "path": ["controllers", "AssociadoController.php"]
+                        }
+                    }
+                },
+                {
+                    "name": "Pagar Anuidade",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"associado_id\": 1,\n    \"anuidade_id\": 1\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8000/controllers/AssociadoController.php?action=pagarAnuidade",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8000",
+                            "path": ["controllers", "AssociadoController.php"],
+                            "query": [
+                                {
+                                    "key": "action",
+                                    "value": "pagarAnuidade"
+                                }
+                            ]
+                        }
+                    }
+                },
+                {
+                    "name": "Verificar Status de Pagamento",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8000/controllers/AssociadoController.php?associado_id=1",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8000",
+                            "path": ["controllers", "AssociadoController.php"],
+                            "query": [
+                                {
+                                    "key": "associado_id",
+                                    "value": "1"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "AnuidadeController",
+            "item": [
+                {
+                    "name": "Cadastrar Anuidade",
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"ano\": 2023,\n    \"valor\": 100.00\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8000/controllers/AnuidadeController.php",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8000",
+                            "path": ["controllers", "AnuidadeController.php"]
+                        }
+                    }
+                },
+                {
+                    "name": "Editar Anuidade",
+                    "request": {
+                        "method": "PUT",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json",
+                                "type": "text"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"ano\": 2023,\n    \"valor\": 120.00\n}"
+                        },
+                        "url": {
+                            "raw": "http://localhost:8000/controllers/AnuidadeController.php",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8000",
+                            "path": ["controllers", "AnuidadeController.php"]
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "AnuidadeAssociadoController",
+            "item": [
+                {
+                    "name": "Checkout Anuidades Devidas",
+                    "request": {
+                        "method": "GET",
+                        "header": [],
+                        "url": {
+                            "raw": "http://localhost:8000/controllers/AnuidadeAssociadoController.php?associado_id=1&data_filiacao=2023-01-01",
+                            "protocol": "http",
+                            "host": ["localhost"],
+                            "port": "8000",
+                            "path": ["controllers", "AnuidadeAssociadoController.php"],
+                            "query": [
+                                {
+                                    "key": "associado_id",
+                                    "value": "1"
+                                },
+                                {
+                                    "key": "data_filiacao",
+                                    "value": "2023-01-01"
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
