@@ -27,6 +27,8 @@ project-root/
 1. **Cadastrar Associado** - Permite o cadastro de novos associados com informações como nome, email, CPF e data de filiação.
 2. **Pagar Anuidade** - Permite que um associado pague uma anuidade específica.
 3. **Verificar Status de Pagamento** - Verifica se o associado está em dia ou em atraso com as anuidades.
+4. **Verificação de Status de Associado** - Exibe o status atual do pagamento das anuidades do associado.
+5. **Atualizar Anuidade** - Permite atualizar o valor de uma anuidade existente para um ano específico.
 
 ### Frontend (React)
 
@@ -34,6 +36,8 @@ project-root/
 2. **Formulário de Cadastro** - Formulário para cadastrar novos associados.
 3. **Pagamento de Anuidade** - Interface para o pagamento de anuidades pendentes.
 4. **Verificação de Status** - Exibe o status atual do pagamento das anuidades do associado.
+5. **Cadastro de Anuidade** - Permite cadastrar uma nova anuidade com ano e valor.
+6. **Atualização de Anuidade** - Permite atualizar o valor de uma anuidade existente.
 
 ## Pré-requisitos
 
@@ -95,6 +99,8 @@ project-root/
 1. **Cadastrar Associado** - Use o formulário para cadastrar um novo associado no sistema.
 2. **Pagar Anuidade** - Navegue até a página de pagamento para quitar anuidades pendentes.
 3. **Verificar Status** - Na página de status, consulte se o associado está em dia com as anuidades.
+4. **Cadastrar Anuidade** - Use o formulário para adicionar uma nova anuidade, especificando o ano e o valor.
+5. **Atualizar Anuidade** - Na página de atualização, escolha o ano e altere o valor da anuidade correspondente.
 
 ## Tecnologias Utilizadas
 
